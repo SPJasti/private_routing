@@ -14,21 +14,10 @@ data TurtleCommand
                  -- anticlockwise; negative values are clockwise.
   deriving (Eq, Show)
   
--- Task 1: Drawing Shapes
-
-triangle :: Double -> [TurtleCommand]
---triangle = undefined -- TODO
-triangle a =[Forward a , Turn ( 2*pi/3 ) ,
-                         Forward a , Turn ( 2*pi/3 ) ,
-                         Forward a , Turn ( 2*pi/3 ) ]
--- version 1
-polygon :: Int -> Double -> [TurtleCommand]
-polygon n s
-  | n < 3     = error "Polygon must have 3 or more sides"
-  | otherwise = Turn (-(pi/2)) : Forward (s/2) : (p (2*pi/(fromIntegral n)) n)
-    where
-      p a 1 = Turn a : Forward (s/2) : Jump 0.0 : [Turn (pi/2)]
-      p a x = Turn a : Forward s : p a (x-1)
+  
+  
+  
+  
 type Angle = Double
 type CurrentPoint = Point
 type TurtleState = (Angle, CurrentPoint, [Point])
