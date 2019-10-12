@@ -1,5 +1,5 @@
 # private_routing
-
+<pre>
 X is login page redirected 
 
 /*   ______________________________________________
@@ -12,3 +12,4 @@ X is login page redirected
     |                                             |
   login-> protected -> public/protected ->logout -' 
 */
+</pre>
